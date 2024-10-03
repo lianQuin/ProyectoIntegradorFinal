@@ -61,21 +61,57 @@ export function vaciarCarrito() {
     this.actualizarCarrito();
     this.mostrarCarrito();
 }
+export async function finalizarCompra() {
+    if (this.carrito.length > 0) {
+        // Solicitar el nombre y el correo del cliente
+        const nombreCliente = prompt('Por favor, ingresa tu nombre:');
+        const correoCliente = prompt('Por favor, ingresa tu correo electrónico:');
 
-export function finalizarCompra() {
-    if (this.carrito.length > 0 ) {
-        alert('Compra finalizada. Gracias por tu compra!');
-       
-        this.vaciarCarrito();
-        this.modalCarrito.style.display = 'none';
+        if (!nombreCliente || !correoCliente) {
+            alert('Debes proporcionar tu nombre y correo para finalizar la compra.');
+            return;
+        }
+
         
-    }
-    else if (this.carrito.length === 0 ) {
-        alert('El carrito esta vacio.');
+
+        // Crear un objeto con los datos del pedido
+        const pedido = {
+            nombre: nombreCliente,
+            email: correoCliente,
+            productos: this.carrito.map(item => {
+                return `${item.nombre} (Precio: $${item.precio}, Stock: ${item.stock}, Descripción: ${item.descripcion})`;
+            }).join('\n'), // Lista de productos separados por salto de línea
+
+        };
+
+        try {
+            // Enviar los datos del pedido a Formspree
+            const response = await fetch('https://formspree.io/f/mqakzapn', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(pedido),
+            });
+
+            if (response.ok) {
+                alert('Compra finalizada. Gracias por tu compra. Recibirás un correo con los detalles.');
+                this.vaciarCarrito();
+                this.modalCarrito.style.display = 'none';
+            } else {
+                alert('Hubo un error al procesar la compra. Por favor, inténtalo nuevamente más tarde.');
+            }
+        } catch (error) {
+            console.error('Error al enviar el pedido:', error);
+        }
+    } else {
+        alert('El carrito está vacío.');
         this.modalCarrito.style.display = 'none';
     }
-    else { alert('No hay elementos en el carrito'); }
 }
+
+
+
 
 export function initEventos() {
     document.querySelectorAll('.boton-comprar').forEach((boton) => {
