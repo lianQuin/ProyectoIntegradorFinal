@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Caramelos Argentina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+        <nav class="navbar">
+            <div class="logo">Tienda Argentina</div>
+            <div class="carrito">
+                <button id="boton-ver-carrito">  <img id="img-carrito" src="./assets/img/carrito-de-compras.png" alt="carrito">
+                <span id="contador-productos">0</span></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="productos" id="productos-container">
+      
+        </div>
+
+        <div id="modal-carrito" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar-modal">&times;</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="lista-carrito"></ul>
+                <li id="total-productos"><strong>  Total a pagar= $ 0.00</strong></li>
+                <button id="boton-vaciar-carrito" class="boton-vaciar-carrito">Vaciar Carrito</button>
+                <button id="boton-finalizar-compra" class="boton-finalizar-compra">Finalizar Compra</button>
+            </div>
+        </div>
+    </main>    
+    <script src="./src/script.js" type="module" ></script>
+    
+</body>
+<footer>
+    By  LILIANA QUINTANA 2024
+</footer>
+
+</html>
+
+
+ 
