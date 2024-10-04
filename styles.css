@@ -25,6 +25,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-texto)
+
 }
 
 .navbar {
@@ -42,6 +43,8 @@ body {
         padding: 20px 30px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         text-align: center;
+        font-size: 20px;
+        font-weight: bold;
     }
     
        
@@ -213,36 +216,42 @@ footer{
     background-color: var(--color-acento);
     width: 100%;
 }
-/* styles.css */
 
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+/* Estilo para el enlace "contacto" */
+#contacto-nav {
+    text-decoration: none; /* Quitamos el subrayado */
+    color: #333; /* Cambia el color del texto según tus preferencias */
+    margin-right: 20px; /* Ajusta el margen derecho para separarlo del carrito */
+}
+#contacto{
+    color: var(--color-fondo-blanco);
 }
 
-/* Estilos para el formulario */
+
 form {
+    border: 1px solid var(--color-acento); 
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-acento); 
 }
 
-/* Estilos para los campos de entrada */
+
+
 input, textarea {
+    border: 1px solid var(--color-acento); 
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-/* Estilos para el botón de envío */
-button {
-    background-color: #007bff;
+
+#boton-enviar{
+    background-color:var(--color-fondos);
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -251,6 +260,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+#boton-enviar:hover {
+    background-color:var(--color-fondos2);
 }

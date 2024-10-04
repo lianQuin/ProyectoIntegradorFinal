@@ -6,12 +6,9 @@ export function actualizarCarrito() {
     totalElement.textContent = `Total a pagar = $ ${totalProductos.toFixed(2)}`;
 }
 
-/*export function agregarAlCarrito(producto) {
-    this.carrito.push(producto);
-    this.actualizarCarrito();
-}*/
 
-// Dentro de la función agregarAlCarrito
+
+
 export function agregarAlCarrito(producto) {
     if (producto.stock > 0) {
         // Agregar el producto al carrito
@@ -21,13 +18,13 @@ export function agregarAlCarrito(producto) {
 
         // Actualizar el elemento HTML que muestra el stock
         const productoCard = document.querySelector(`[data-id="${producto.id}"]`);
-        const stockElement = productoCard.querySelector('stock'); // Asegúrate de tener una clase CSS para el stock
+        const stockElement = productoCard.querySelector('stock'); 
         stockElement.textContent = `Stock: ${producto.stock}`;
     } else {
         console.log("No hay suficiente stock para agregar este producto.");
     }
 }
-export function mostrarCarrito() {
+export function mostrarCarrito() { 
     this.listaCarrito.innerHTML = '';
     this.carrito.forEach((producto, indice) => {
         const li = document.createElement('li');
@@ -72,16 +69,13 @@ export async function finalizarCompra() {
             return;
         }
 
-        
-
         // Crear un objeto con los datos del pedido
         const pedido = {
             nombre: nombreCliente,
             email: correoCliente,
             productos: this.carrito.map(item => {
                 return `${item.nombre} (Precio: $${item.precio}, Stock: ${item.stock}, Descripción: ${item.descripcion})`;
-            }).join('\n'), // Lista de productos separados por salto de línea
-
+            }).join('\n'), 
         };
 
         try {
@@ -109,6 +103,9 @@ export async function finalizarCompra() {
         this.modalCarrito.style.display = 'none';
     }
 }
+
+
+
 
 
 
