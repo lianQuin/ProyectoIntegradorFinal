@@ -233,7 +233,9 @@ footer {
 }
 
 
-#contacto-nav {
+#contacto-nav,
+#home-nav ,
+#reseñas-nav {
     text-decoration: none;
     color: #333;
     margin-right: 20px;

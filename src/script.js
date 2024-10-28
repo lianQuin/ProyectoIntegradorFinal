@@ -118,43 +118,51 @@ document.addEventListener('DOMContentLoaded', function() {
     function agregarReseña({ nombre, texto, estrellas, fotos, fecha }) {
         const reseñaCard = document.createElement('div');
         reseñaCard.classList.add('reseña-card');
-
+    
         const reseñaInfo = document.createElement('div');
         reseñaInfo.classList.add('reseña-info');
-
+    
         const reseñaEstrellas = document.createElement('span');
         reseñaEstrellas.classList.add('reseña-estrellas');
         reseñaEstrellas.textContent = estrellas;
-
+    
         const reseñaFecha = document.createElement('span');
         reseñaFecha.classList.add('reseña-fecha');
         reseñaFecha.textContent = fecha;
-
+    
         reseñaInfo.appendChild(reseñaEstrellas);
         reseñaInfo.appendChild(reseñaFecha);
-
+    
         const reseñaTexto = document.createElement('p');
         reseñaTexto.classList.add('reseña-texto');
         reseñaTexto.textContent = texto;
-
+    
         const reseñaNombre = document.createElement('p');
         reseñaNombre.classList.add('reseña-nombre');
         reseñaNombre.textContent = nombre ? `Escrito por: ${nombre}` : '';
-
+    
         const reseñaFotos = document.createElement('div');
         reseñaFotos.classList.add('reseña-fotos');
+        
         fotos.forEach(foto => {
             const img = document.createElement('img');
             img.src = foto;
             img.alt = 'Foto de reseña';
             reseñaFotos.appendChild(img);
         });
-
+    
         reseñaCard.appendChild(reseñaInfo);
         reseñaCard.appendChild(reseñaNombre);
         reseñaCard.appendChild(reseñaTexto);
         reseñaCard.appendChild(reseñaFotos);
-
+    
+        const reseñasContainer = document.getElementById('reseñas-container');
         reseñasContainer.appendChild(reseñaCard);
     }
-});
+});    
+
+
+
+
+
+
