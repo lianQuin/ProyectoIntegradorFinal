@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <title>Ecommerce - Caramelos Argentina</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
    <header>
-        <nav class="navbar"> 
-            <a id="contacto-nav" href="./src/contacto/contacto.html">contacto</a>
-            
-            <div class="logo">Tienda Argentina</div>
-            <div class="carrito">
-               
-                <button id="boton-ver-carrito">  <img id="img-carrito" src="./assets/img/carrito-de-compras.png" alt="carrito">
-                <span id="contador-productos">0</span></button>
-            </div>
-        </nav>
+    <nav class="navbar">
+        <a id="home-nav" href="./index.html">Inicio</a>
+        <a id="contacto-nav" href="./src/contacto/contacto.html">Contacto</a>
+        <a id="reseñas-nav" href="./src/reseñas/reseñas.html">Reseñas</a>
+        <div class="logo">Tienda Argentina</div>
+        <div class="carrito">
+            <button id="boton-ver-carrito">
+                <img id="img-carrito" src="./assets/img/carrito-de-compras.png" alt="carrito">
+                <span id="contador-productos">0</span>
+            </button>
+        </div>
+    </nav>
+    
     </header>
     <main>
         <div class="productos" id="productos-container">
@@ -26,7 +30,7 @@
 
         <div id="modal-carrito" class="modal">
             <div class="modal-contenido">
-                <span class="cerrar-modal">&times;</span>
+                <span class="cerrar-modal"></span>
                 <h2>Carrito de Compras</h2>
                 <ul id="lista-carrito"></ul>
                 <li id="total-productos"><strong>  Total a pagar= $ 0.00</strong></li>

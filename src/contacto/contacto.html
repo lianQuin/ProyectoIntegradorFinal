@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <title>Formulario de Contacto</title>
     <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
+    
+    <header>
+        <nav class="navbar"> 
+            <a id="contacto-nav" href="../../index.html">inicio</a>
+            
+            <div class="logo">Tienda</div>
+            
+        </nav>
+    </header>
+   <main>
     <h1 id="contacto">Contacto</h1>
     <form action="https://formspree.io/f/mqakzapn" method="POST">
         <label for="nombre">Nombre:</label>
@@ -20,6 +31,7 @@
 
         <button id="boton-enviar" type="submit">Enviar</button>
     </form>
+    </main>
     <script src="../script.js" type="module"></script>
 </body>
 </html>

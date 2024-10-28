@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Reseñas</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a id="home-nav" href="../../index.html">Inicio</a>
+            <a id="contacto-nav" href="../contacto/contacto.html">Contacto</a>
+           
+            <div class="logo">Tienda Argentina</div>
+            
+        </nav>
+    </header>
+    <main>
+        <section id="reseñas" class="reseñas">
+            <h2>Reseñas de Clientes</h2>
+            <!-- Aquí se agregarán las reseñas dinámicamente -->
+            <div id="reseñas-container"></div>
+        
+            <!-- Formulario de Reseñas -->
+            <form id="reseñas-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+        
+                <label for="reseña">Reseña:</label>
+                <textarea id="reseña" name="reseña" rows="4" required></textarea>
+        
+                <label for="estrellas">Calificación:</label>
+                <select id="estrellas" name="estrellas" required>
+                    <option value="⭐⭐⭐⭐⭐">5 estrellas</option>
+                    <option value="⭐⭐⭐⭐">4 estrellas</option>
+                    <option value="⭐⭐⭐">3 estrellas</option>
+                    <option value="⭐⭐">2 estrellas</option>
+                    <option value="⭐">1 estrella</option>
+                </select>
+        
+                <label for="foto">Foto (opcional):</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+        
+                <button type="submit">Enviar Reseña</button>
+            </form>
+        </section>
+        
+       
+    </main>
+    <footer>
+        By LILIANA QUINTANA 2024
+    </footer>
+    <script src="../script.js" type="module"></script>
+</body>
+</html>
