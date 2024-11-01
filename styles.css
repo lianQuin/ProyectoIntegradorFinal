@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: "Oswald", sans-serif;
+ font-family: "Poppins", sans-serif;*/
 :root {
     --color-acento: darkred;
     --color-acento-claro: brown;
@@ -48,10 +52,8 @@ body {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
 }
-
-
-
 
 
 
@@ -73,14 +75,28 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
+.logo {
+    display: flex;
+    align-items: center; 
+}
+
+.logo-img {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
 
 .carrito {
+
     font-size: 45px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    
 }
 
 img {
     width: 80%;
-    height: 190px;
+    height: 190px; background: linear-gradient(to right, #ffecd2, #fcb69f);
 }
 
 #img-carrito {
@@ -88,27 +104,85 @@ img {
     height: 30px;
 }
 
+
+.header-contenedor {
+    display: flex;
+    margin-top: 70px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+   
+    background-image: url('../../assets/img/peluqueria2.jpeg');
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../../assets/img/peluqueria2.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    
+}
+
+.contenedor-header-texto {
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.contenedor-header-texto h1 {
+    font-size: 55px;
+   line-height: 1;
+    font-weight: 700;
+    margin-bottom: 55px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+  
+}
+.header-parrafo{
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.btn-1 {	
+   
+    background-color: var(--color-acento);
+    color: var(--color-fondo-blanco);
+    padding: 3px 10px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-bottom: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+.contenedor-header-img{
+    margin-left: auto; 
+    padding-left: 10px;
+}
+
+
 .productos {
 
     display: flex;
     justify-content: space-around;
     margin: 60px;
     flex-wrap: wrap;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 10px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
 }
 
 .producto-card {
     margin-top: 80px;
-    border: 1px solid var(--color-acento);
-    padding: 20px;
-    width: 250px;
+   
+    padding: 10px;
+    width: 100px;
     text-align: center;
     border-radius: 8px;
-    background-color: var(--color-fondo-blanco);
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -126,7 +200,7 @@ img {
     height: 190px;
     object-fit: cover;
     border-radius: 8px;
-    background-color: var(--color-fondo-blanco);
+    
 }
 
 .boton-comprar {
@@ -154,6 +228,7 @@ img {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
+ 
 }
 
 .modal-contenido {
@@ -234,7 +309,7 @@ footer {
 
 
 #contacto-nav,
-#home-nav ,
+#home-nav,
 #reseñas-nav {
     text-decoration: none;
     color: #333;
@@ -285,6 +360,7 @@ textarea {
 #boton-enviar:hover {
     background-color: var(--color-fondos2);
 }
+
 .reseñas {
     padding: 20px;
     background-color: #f9f9f9;
@@ -333,6 +409,7 @@ textarea {
     border-radius: 8px;
     margin-right: 10px;
 }
+
 #reseñas-form {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -350,7 +427,9 @@ textarea {
     font-weight: bold;
 }
 
-#reseñas-form input, #reseñas-form textarea, #reseñas-form select {
+#reseñas-form input,
+#reseñas-form textarea,
+#reseñas-form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;

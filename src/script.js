@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
         estrellas: '⭐⭐⭐⭐⭐',
         fecha: '2024-10-27',
         texto: '¡Las mejores golosinas que he probado! Definitivamente volveré a comprar.',
-        fotos: ['../../assets/img/bonobon.jpg']  
+        fotos: ['../../assets/img/peinado.jpg']  
     };
     agregarReseña(nuevaReseña);
 

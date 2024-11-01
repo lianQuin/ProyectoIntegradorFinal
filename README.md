@@ -5,7 +5,7 @@ Proyecto/
 │
 ├── assets/
 │   └── img/
-│       └── bonobon.jpg
+│       
 │
 ├── src/
 │   ├── clases/
@@ -18,9 +18,9 @@ Proyecto/
 │   │   └── reseñas.html
 │   │
 │   ├── datos/
-│   │   └── golosinas.Database.js
-│   │
-│   └── reseñas.js  # Archivo JavaScript compartido
+│        └── golosinas.Database.js
+│   
+│   
 │
 ├── index.html
 ├── readme.md
@@ -38,10 +38,11 @@ reseña/: Carpeta que contiene reseñas.html.
 
 datos/: Carpeta que contiene bases de datos o archivos de datos como golosinas.Database.js.
 
-reseñas.js: Archivo JavaScript para funcionalidades relacionadas con las reseñas, aunque está fuera de las subcarpetas, sigue estando dentro de src/.
-
 index.html: Archivo HTML principal del proyecto.
 
 readme.md: Archivo de documentación del proyecto.
 
 styles.css: Archivo de estilos CSS para todo el proyecto.
+
+Freepik, pixabay, unsplash
+Pexels,free
