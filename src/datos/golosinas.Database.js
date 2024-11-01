@@ -2,7 +2,7 @@ import {Producto}from"../clases/producto.class.js";
 export const golosinasDatabase= [
     new Producto(
          1,
-        'Chupetín',
+        'Tintura/coloracion',
         150,
         'assets/img/tintura.jpg',
         'Sabor Uva',
@@ -10,7 +10,7 @@ export const golosinasDatabase= [
     ),
     new Producto(
          2,
-        'Mogul moras',
+        'Peinados para cualquier evento',
         150,
         'assets/img/peinado.jpg',
         'Sabor variado',
@@ -18,7 +18,7 @@ export const golosinasDatabase= [
     ),
     new Producto(
      3,
-     'flynn-paff-relleno-sabor-uva',
+     'Maquillaje profecional',
       100,
       'assets/img/maquillaje.jpg',
         'Sabor chicle',
@@ -26,7 +26,7 @@ export const golosinasDatabase= [
     ),
     new Producto(
         4,
-        'Alfajor Rasta x6',
+        'Alisados de todo tipo',
         150,
         'assets/img/alisado.jpg',
         'Sabor chocolate',
@@ -34,7 +34,7 @@ export const golosinasDatabase= [
     ),
     new Producto(
         5,
-        'Dos corazones',
+        'corte y peinados',
         150,
         'assets/img/peinado.jpg',
         'Sabor chocolate',
@@ -59,9 +59,9 @@ export const golosinasDatabase= [
     ),
     new Producto(
         8,
-        'bon o bon',
+        'Manicuria',
         150,
-        'assets/img/peinado.jpg',
+        'assets/img/captura.jpeg',
          'Sabor chocolate',
          10,
     ),

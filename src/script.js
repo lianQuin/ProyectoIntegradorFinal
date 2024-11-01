@@ -30,9 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
             precio.textContent = `Precio: $${producto.precio.toFixed(2)}`;
             productoCard.appendChild(precio);
 
-            const stock = document.createElement('stock');
-            stock.textContent = producto.stock;
-            productoCard.appendChild(stock);
+           
 
             const botonComprar = document.createElement('button');
             botonComprar.textContent = 'Comprar';
@@ -86,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const nuevaReseña = {
         estrellas: '⭐⭐⭐⭐⭐',
         fecha: '2024-10-27',
-        texto: '¡Las mejores golosinas que he probado! Definitivamente volveré a comprar.',
-        fotos: ['../../assets/img/peinado.jpg']  
+        texto: '¡la mejor eleccion que hice este año! Definitivamente volveré .',
+        fotos: ['../../assets/img/tintura.jpg']  
     };
     agregarReseña(nuevaReseña);
 
