@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* font-family: "Oswald", sans-serif;
- font-family: "Poppins", sans-serif;*/
+/* font-family: "Oswald", sans-serif; font-family: "Poppins", sans-serif; */
+
 :root {
     --color-acento: darkred;
     --color-acento-claro: brown;
@@ -13,7 +13,6 @@
     --color-boton-fin: darkblue;
     --color-fondo-blanco: white;
     --letras: 'Roboto', sans-serif;
-
 }
 
 * {
@@ -22,21 +21,15 @@
     box-sizing: border-box;
 }
 
-
-
-
 body {
     font-family: var(--letras);
     margin: 0;
     padding: 0;
     background-color: var(--color-texto);
     background: linear-gradient(to right, #ffecd2, #fcb69f);
-
-
 }
 
 .navbar {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -55,48 +48,39 @@ body {
     background: linear-gradient(to right, #ffecd2, #fcb69f);
 }
 
-
-
 #contador-productos {
     background-color: var(--color-acento-claro);
     border: 2px solid #1f1d1d;
     border-radius: 35px;
-
     display: inline-block;
     width: 20px;
     line-height: 20px;
     aspect-ratio: 1;
     text-align: center;
     position: absolute;
-
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-}
 .logo {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .logo-img {
-    width: 50px; 
+    width: 50px;
     height: 50px;
-    border-radius: 50%; 
-    margin-right: 10px; 
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .carrito {
-
     font-size: 45px;
     background: linear-gradient(to right, #ffecd2, #fcb69f);
-    
 }
 
 img {
     width: 80%;
-    height: 190px; background: linear-gradient(to right, #ffecd2, #fcb69f);
+    height: 190px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
 }
 
 #img-carrito {
@@ -104,45 +88,44 @@ img {
     height: 30px;
 }
 
-
 .header-contenedor {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 70px;
     background: linear-gradient(to right, #ffecd2, #fcb69f);
-   
     background-image: url('../../assets/img/peluqueria2.jpeg');
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../../assets/img/peluqueria2.jpeg');
-    background-size: cover; 
-    background-position: center; 
-    
+    background-size: cover;
+    background-position: center;
 }
 
 .contenedor-header-texto {
-    flex-basis: 50%;
+    flex: 1;
+    min-width: 300px;
     justify-content: center;
     align-items: center;
     text-align: center;
-   
+    padding: 20px;
 }
 
 .contenedor-header-texto h1 {
     font-size: 55px;
-   line-height: 1;
+    line-height: 1;
     font-weight: 800;
     margin-bottom: 55px;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 30px;
-  
 }
-.header-parrafo{
+
+.header-parrafo {
     margin-top: 30px;
     margin-bottom: 60px;
     font-weight: 800;
 }
-.btn-1 {	
-   
+
+.btn-1 {
     background-color: var(--color-acento);
     color: var(--color-fondo-blanco);
     padding: 3px 10px;
@@ -160,10 +143,15 @@ img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
-.contenedor-header-img{
-    margin-left: auto; 
-    padding-left: 10px;
+
+
+
+.contenedor-header-img video {
+    width: 100%;
+    height: auto;
+    display: block;
 }
+
 
 
 .productos {
@@ -452,6 +440,14 @@ textarea {
 }
 
 @media (max-width: 768px) {
+    .header-contenedor {
+        flex-direction: column;
+    }
+
+    .logo-img {
+        margin-bottom: 10px;
+    }
+    .producto-card{width: 45%;}
     .contacto {
         display: flex;
         flex-direction: column;
@@ -461,4 +457,14 @@ textarea {
     .contacto form {
         width: 90%;
     }
+}
+/* Responsive Design */
+@media (max-width: 480px) {
+    .producto-card{width: 100%;}
+    .header-contenedor {
+        padding: 10px;
+    }
+   .header-contenedor{
+    padding: 10px;
+   }
 }
