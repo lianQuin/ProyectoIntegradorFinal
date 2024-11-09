@@ -288,13 +288,6 @@ img {
     background-color: var(--color-boton-fin);
 }
 
-footer {
-    margin-top: 310px;
-    box-shadow: 0 -30Ppx 5px var(--color-fondos3);
-    text-align: center;
-    background-color: var(--color-acento);
-    width: 100%;
-}
 
 
 #contacto-nav,
@@ -454,9 +447,9 @@ textarea {
         align-items: center;
     }
 
-    .contacto form {
+   .contacto form {
         width: 90%;
-    }
+    } 
 }
 /* Responsive Design */
 @media (max-width: 480px) {
@@ -467,4 +460,21 @@ textarea {
    .header-contenedor{
     padding: 10px;
    }
+   .contacto form {
+    width: 100%;
+} 
 }
+footer {
+    margin-top: 310px;
+   
+    text-align: center;
+    background-color: var(--color-acento);
+    width: 100%;
+    position: relative; 
+    bottom: 0;
+}
+
+
+
+
+

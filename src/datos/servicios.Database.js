@@ -1,11 +1,11 @@
 import {Producto}from"../clases/producto.class.js";
-export const golosinasDatabase= [
+export const serviciosDatabase= [
     new Producto(
          1,
         'Tintura/coloracion',
         150,
         'assets/img/tintura.jpg',
-        'Sabor Uva',
+        'Todos los colores',
         10,
     ),
     new Producto(
@@ -13,7 +13,7 @@ export const golosinasDatabase= [
         'Peinados para cualquier evento',
         150,
         'assets/img/peinado.jpg',
-        'Sabor variado',
+        'Cualquier diseño',
         10,
     ),
     new Producto(
@@ -21,7 +21,7 @@ export const golosinasDatabase= [
      'Maquillaje profecional',
       100,
       'assets/img/maquillaje.jpg',
-        'Sabor chicle',
+        'Productos de primera marca',
         10,
     ),
     new Producto(
@@ -29,7 +29,7 @@ export const golosinasDatabase= [
         'Alisados de todo tipo',
         150,
         'assets/img/alisado.jpg',
-        'Sabor chocolate',
+        'Con o sin formol',
         10,
     ),
     new Producto(
@@ -37,24 +37,24 @@ export const golosinasDatabase= [
         'corte y peinados',
         150,
         'assets/img/peinado.jpg',
-        'Sabor chocolate',
+        'Desde cabello corto hasta cabello largo',
         10,
     ),
    
     new Producto(
          6,
-        'pic-nic',
+        'peinados fiesta',
         150,
         'assets/img/peinado.jpg',
-        'Sabor chocolate',
+        'Excelente presentaciones',
         10,
     ),
     new Producto(
         7,
-        'pico dulce',
+        'Curso de peinados',
         150,
         'assets/img/peinado.jpg',
-        'Sabor chocolate',
+        'Aprende a confeccionar tus peinados',
         10,
     ),
     new Producto(
@@ -62,7 +62,7 @@ export const golosinasDatabase= [
         'Manicuria',
         150,
         'assets/img/captura.jpeg',
-         'Sabor chocolate',
+         'diseños,colores y productos de primera',
          10,
     ),
     

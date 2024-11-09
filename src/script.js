@@ -1,13 +1,13 @@
 // script.js
 import { Carrito } from "./clases/carrito.class.js";
-import { golosinasDatabase } from "./datos/golosinas.Database.js";
+import { serviciosDatabase } from "./datos/servicios.Database.js";
 
 document.addEventListener('DOMContentLoaded', function() {
     const carrito = new Carrito();
 
     const productosContainer = document.getElementById('productos-container');
     if (productosContainer) {
-        golosinasDatabase.forEach(producto => {
+        serviciosDatabase.forEach(producto => {
             const productoCard = document.createElement('div');
             productoCard.classList.add('producto-card');
             productoCard.dataset.id = producto.id;
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             boton.addEventListener('click', (evento) => {
                 const productoCard = evento.target.closest('.producto-card');
                 const id = productoCard.getAttribute('data-id');
-                const productoEncontrado = golosinasDatabase.find(item => item.id === parseInt(id));
+                const productoEncontrado = serviciosDatabase.find(item => item.id === parseInt(id));
                 carrito.agregarAlCarrito(productoEncontrado);
             });
         });
