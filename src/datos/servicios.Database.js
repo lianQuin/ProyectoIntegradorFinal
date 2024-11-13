@@ -61,7 +61,7 @@ export const serviciosDatabase= [
         8,
         'Manicuria',
         150,
-        'assets/img/captura.jpeg',
+        'assets/img/Captura.jpeg',
          'diseños,colores y productos de primera',
          10,
     ),
