@@ -6,20 +6,14 @@
     <title>Ecommerce - Reseñas</title>
     <link rel="stylesheet" href="../../styles.css">
 </head>
-<>
+<body>
     <header>
         <nav class="navbar">
-
             <div class="logo">
                 <img src="../../assets/img/logo.jpg" alt="Logo" class="logo-img">
             </div>
-           
-         
             <a id="home-nav" href="../../index.html">Inicio</a>
             <a id="contacto-nav" href="../contacto/contacto.html">Contacto</a>
-           
-            
-            
         </nav>
     </header>
     <main>
@@ -27,8 +21,7 @@
             <h2>Reseñas de Clientes</h2>
             <!-- Aquí se agregarán las reseñas dinámicamente -->
             <div id="reseñas-container"></div>
-            
-        
+
             <!-- Formulario de Reseñas -->
             <form id="reseñas-form">
                 <label for="nombre">Nombre:</label>
@@ -52,14 +45,65 @@
                 <button type="submit">Enviar Reseña</button>
             </form>
         </section>
-        
-       
     </main>
-    <footer>
-        By LILIANA QUINTANA 2024 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima numquam ipsam quam! Tenetur molestiae rem minima hic voluptas aliquid eaque. Reiciendis optio deleniti quisquam ipsum magni totam aperiam voluptas nam.
-    </footer>
-    <script src="../script.js" type="module"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const reseñasContainer = document.getElementById("reseñas-container");
+            const reseñasForm = document.getElementById("reseñas-form");
 
+            // Cargar reseñas desde LocalStorage
+            const reseñas = JSON.parse(localStorage.getItem("reseñas")) || [];
+            reseñas.forEach(agregarReseñaAlDOM);
+
+            // Agregar una reseña inicial
+            const reseñaInicial = {
+                nombre: "Juan Pérez",
+                reseña: "Excelente producto, muy recomendable.",
+                estrellas: "⭐⭐⭐⭐⭐",
+                foto: "../../assets/img/peinado.jpg"
+            };
+            agregarReseñaAlDOM(reseñaInicial);
+            
+            // Añadir la reseña inicial a LocalStorage 
+            if (reseñas.length === 0) {
+                reseñas.push(reseñaInicial);
+                localStorage.setItem("reseñas", JSON.stringify(reseñas));
+            }
+
+            // Manejar el envío del formulario
+            reseñasForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                
+                const nombre = document.getElementById("nombre").value;
+                const reseña = document.getElementById("reseña").value;
+                const estrellas = document.getElementById("estrellas").value;
+                const foto = document.getElementById("foto").files[0];
+                
+                const nuevaReseña = { nombre, reseña, estrellas, foto: URL.createObjectURL(foto) };
+                reseñas.push(nuevaReseña);
+
+                // Guardar reseñas en LocalStorage
+                localStorage.setItem("reseñas", JSON.stringify(reseñas));
+
+                // Agregar la nueva reseña al DOM
+                agregarReseñaAlDOM(nuevaReseña);
+
+                // Resetear el formulario
+                reseñasForm.reset();
+            });
+
+            function agregarReseñaAlDOM(reseña) {
+                const div = document.createElement("div");
+                div.classList.add("reseña");
+                div.innerHTML = `
+                    <h3>${reseña.nombre}</h3>
+                    <p>${reseña.reseña}</p>
+                    <p>${reseña.estrellas}</p>
+                    ${reseña.foto ? `<img src="${reseña.foto}" alt="Foto de ${reseña.nombre}" class="reseña-foto">` : ''}
+                `;
+                reseñasContainer.appendChild(div);
+            }
+        });
+    </script>
 </body>
-   
 </html>
